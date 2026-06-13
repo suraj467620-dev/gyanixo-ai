@@ -1,2 +1,78 @@
-# gyanixo-ai
-AI Chatbot &amp; JEE Study Assistant.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gyanixo AI</title>
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:20px;
+}
+.container{
+max-width:500px;
+margin:auto;
+}
+h1{
+color:#38bdf8;
+}
+.card{
+background:#1e293b;
+padding:15px;
+margin:10px 0;
+border-radius:12px;
+}
+button{
+background:#38bdf8;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+input{
+width:90%;
+padding:10px;
+margin-top:10px;
+border-radius:8px;
+border:none;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🤖 Gyanixo AI</h1>
+<p>AI Chatbot & JEE Study Assistant</p>
+
+<div class="card">
+<h3>📚 JEE Study Help</h3>
+<p>Physics, Chemistry & Mathematics</p>
+</div>
+
+<div class="card">
+<h3>📝 Notes Generator</h3>
+<p>Create quick study notes</p>
+</div>
+
+<div class="card">
+<h3>❓ Ask AI</h3>
+<input type="text" id="question" placeholder="Type your question">
+<br><br>
+<button onclick="askAI()">Send</button>
+<p id="answer"></p>
+</div>
+</div>
+
+<script>
+function askAI(){
+let q=document.getElementById("question").value;
+document.getElementById("answer").innerHTML=
+"You asked: " + q + "<br>AI integration coming soon!";
+}
+</script>
+</body>
+</html>
+
