@@ -66,12 +66,20 @@ border:none;
 </div>
 </div>
 
-<script>
+<script type="module">
+import { injectSpeedInsights } from './node_modules/@vercel/speed-insights/dist/index.mjs';
+
+// Initialize Vercel Speed Insights
+injectSpeedInsights();
+
 function askAI(){
 let q=document.getElementById("question").value;
 document.getElementById("answer").innerHTML=
 "You asked: " + q + "<br>AI integration coming soon!";
 }
+
+// Make askAI globally available
+window.askAI = askAI;
 </script>
 </body>
 </html>
